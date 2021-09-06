@@ -1,0 +1,175 @@
+﻿/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme. 
+The imported CSS rules must precede all other types of rules.
+*/
+
+/*
+The following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+    font-size: 18;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 22;
+    font-weight: bold;
+    color: black;
+}
+
+.h1P {
+    text-align: center;
+    font-size: 30;
+    font-weight: bold;
+    color: white;
+}
+
+.p {
+    font-size: 18em;
+    text-align: center;
+}
+
+.p2 {
+    font-size: 18em;
+    color: black;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.t-36 {
+    font-size: 36;
+}
+
+.HeaderLabel {
+    font-family: 'KaushanScript-Regular';
+    color: white;
+    font-size: 24;
+    padding-top: 10;
+}
+
+#btmNav {
+    background-color: #282c2f;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Teko-Regular';
+}
+
+#btmButton {
+    background-color: #282c2f;
+    border: none;
+    width: 20%;
+    font-size: 20;
+    margin-bottom: 5;
+    margin-top: 5;
+    color: white;
+    padding-top: 16;
+    android-elevation: 0;
+    font-family: "Font Awesome 5 Solid", "fa-solid-900";
+}
+
+#topNav {
+    background-color: #282c2f;
+    width: 100%;
+    font-family: 'Teko-Regular';
+}
+
+#topButton {
+    background-color: #282c2f;
+    border: none;
+    font-size: 20;
+    margin-bottom: 5;
+    margin-top: 5;
+    color: white;
+    padding-top: 16;
+    android-elevation: 0;
+    font-family: "Font Awesome 5 Solid", "fa-solid-900";
+}
+
+/*search items*/
+.search {
+    width: 100%;
+}
+
+.searchContainer {
+    display: flex;
+    flex-flow: wrap;
+    padding-top: 2;
+}
+
+.searchItem {
+    border-radius: 25%;
+    border-width: 0;
+    border-color: transparent;
+    background-color: lightgray;
+    height: 35;
+    text-align: center;
+    min-width: 10;
+    padding: 0;
+    font-weight: 20;
+}
+
+.homeContentHead {
+    font-size: 20;
+    font-weight: bold;
+    color: white;
+    font-family: 'Teko', sans-serif;
+}
+
+.homeContentPar {
+    color: white;
+}
+
+.homeContentButton {
+    background-color: green;
+    color: white;
+}
+
+#imageFade {
+    opacity: 0;
+}
+
+.home {
+    color: red;
+}
+
+/*skip login button*/
+
+#skipButton {
+    background-color: white;
+    color: blue;
+    android-elevation: 0;
+}
+
+/*login button on profile page*/
+
+#elseLogin {
+    background-color: #202124;
+    color: blue;
+    android-elevation: 0;
+}
+
+/*camera buttton*/
+
+.cameraButton {
+    android-elevation: 0;
+    height: 80;
+    width: 80;
+    background-color: gray;
+    border-color: rgb(190, 51, 51);
+    border-radius: 200;
+    border-width: 5;
+    color: whitesmoke;
+}

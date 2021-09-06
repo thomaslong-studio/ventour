@@ -1,0 +1,63 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo" class="page" actionBarHidden="true">
+  <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+  <Page.actionBar>
+    <ActionBar title="Ventour" icon="" class="action-bar"></ActionBar>
+  </Page.actionBar>
+  <!--
+    The StackLayout stacks UI components on the screen—either vertically or horizontally.
+    In this case, the StackLayout does vertical stacking; you can change the stacking to
+    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
+    You can learn more about NativeScript layouts at
+    https://docs.nativescript.org/ui/layout-containers.
+
+    These components make use of several CSS class names that are part of the NativeScript
+    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
+    class names available for styling your app at https://docs.nativescript.org/ui/theme.
+    -->
+
+  <DockLayout>
+
+    <FlexboxLayout id="btmNav" dock="bottom" orientation="horizontal" horizontalAlignment="center">
+      <Button id="btmButton" tap="onTapHome" text="&#xf015;"></Button>  
+      <Button id="btmButton" tap="onTapSearch" text="&#xf002;"></Button>
+      <Button id="btmButton" tap="onTapCamera" text="&#xf083;"></Button> 
+      <Button id="btmButton" tap="onTapMap" text="&#xf124;"></Button>     
+      <Button id="btmButton" tap="onTapProfile" text="&#xf007;"></Button>
+    </FlexboxLayout> 
+
+
+    <StackLayout dock="top">
+      <SearchBar class="search" hint="Search" color="black" backgroundColor="#202124" textFieldHintColor="whitesmoke"
+        textFieldBackgroundColor="lightgray">
+      </SearchBar>
+    </StackLayout>
+
+    <ScrollView>
+      <AbsoluteLayout width="100%" height="100%" backgroundColor="#202124">
+        <Label class="homeContentHead" text="Categories" left="-10" top="-20" margin="30" width="45%"
+          height="15%" backgroundColor="transparent" />
+        <Button tap="onTapCategory" class="searchItem" text="Bars" left="20" top="70" width="180" height="100"
+          backgroundColor="#8092B3"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Restaurants" left="210" top="70" width="180" height="100"
+          backgroundColor="#FF7773"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Golf" left="20" top="180" width="180" height="100"
+          backgroundColor="#C7E5FC"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Skateparks" left="210" top="180" width="180" height="100"
+          backgroundColor="#C8C9A5"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Gyms" left="20" top="290" width="180" height="100"
+          backgroundColor="#B5B872"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Pizza" left="210" top="290" width="180" height="100"
+          backgroundColor="#A3FFE1"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Events" left="20" top="400" width="180" height="100"
+          backgroundColor="#C3A5C9"></Button>
+        <Button tap="onTapCategory" class="searchItem" text="Concerts" left="210" top="400" width="180" height="100"
+          backgroundColor="#B9FF9D"></Button>
+      </AbsoluteLayout>
+    </ScrollView>
+
+  </DockLayout>
+
+</Page>

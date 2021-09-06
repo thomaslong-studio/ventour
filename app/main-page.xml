@@ -1,0 +1,116 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo" class="page" actionBarHidden="true">
+  <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+  <ActionBar class="actionBar" title="Ventour">
+    <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
+      <Label text="Ventour" class="action-label" position="center"></Label>
+    </StackLayout>
+  </ActionBar>
+  <!--
+    The StackLayout stacks UI components on the screen—either vertically or horizontally.
+    In this case, the StackLayout does vertical stacking; you can change the stacking to
+    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
+    You can learn more about NativeScript layouts at
+    https://docs.nativescript.org/ui/layout-containers.
+
+    These components make use of several CSS class names that are part of the NativeScript
+    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
+    class names available for styling your app at https://docs.nativescript.org/ui/theme.
+    -->
+
+  <DockLayout>
+
+    <FlexboxLayout id="btmNav" dock="top" orientation="horizontal" horizontalAlignment="center">
+      <Label class="HeaderLabel" text="Ventour" position="center" height="8%"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout id="btmNav" dock="bottom" orientation="horizontal" horizontalAlignment="center">
+      <Button id="btmButton" tap="onTapHome" text="&#xf015;"></Button>  
+      <Button id="btmButton" tap="onTapSearch" text="&#xf002;"></Button>
+      <Button id="btmButton" tap="onTapCamera" text="&#xf083;"></Button> 
+      <Button id="btmButton" tap="onTapMap" text="&#xf124;"></Button>     
+      <Button id="btmButton" tap="onTapProfile" text="&#xf007;"></Button>
+    </FlexboxLayout>    
+
+    <ScrollView orientation="vertical">
+      <StackLayout orientation="vertical" width="100%" height="250%" backgroundColor="lightgray">
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/restaurant.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Dave's Restaurant" left="-10" top="-10" margin="30" width="45%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Dave's Restaurant accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/art.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Eastside Art Gallery" left="-10" top="-10" margin="30" width="45%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating2.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Eastside Art Gallery accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/bowling.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Younge Street Bowladrome" left="-10" top="-10" margin="30" width="70%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating3.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Younge Street Bowladrome accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/brewery.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Grand Rapids Brewing" left="-10" top="-10" margin="30" width="75%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating2.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Grand Rapids Brewing accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/club.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Pauly's Night Club" left="-10" top="-10" margin="30" width="75%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating2.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Pauly's Night Club accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+        <AbsoluteLayout width="100%" height="16.66%" backgroundColor="lightgray">
+          <Image src="~/images/ski.jpg" stretch="aspectFill" left="80" top="0" width="85%" height="100%"></Image>
+          <Image src="~/images/gradient.png" stretch="aspectFill" left="0" top="0" width="100%" height="100%"></Image>
+          <Label class="homeContentHead" text="Mt. Gnarly Ski Hill" left="-10" top="-10" margin="30" width="75%"
+            height="15%" backgroundColor="transparent" />
+          <Image src="~/images/rating.png" left="-10" top="-80" margin="30" width="25%" height="100%"></Image>
+          <Label class="homeContentPar"
+            text="Mt. Gnarly Ski Hill accumsan efficiendi per, sed modo nostrum democritum cu. Vim an summo laboramus."
+            textWrap="true" left="-10" top="50" margin="30" width="45%" height="35%" backgroundColor="transparent" />
+          <Button class="homeContentButton" tap="onTapMap" text="Route" left="15" top="160"></Button>
+        </AbsoluteLayout>
+      </StackLayout>
+    </ScrollView>
+
+  </DockLayout>
+
+</Page>
